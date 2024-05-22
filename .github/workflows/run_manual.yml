@@ -19,12 +19,12 @@ jobs:
 
     - name: Run script
       run: |
-          python -c "
-          from datetime import datetime
-          with open('results.txt', 'a+') as file_name:
-              output_date = datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
-              file_name.write(f'{output_date}\n')
-          "
+        python -c "
+        from datetime import datetime
+        with open('results.txt', 'a+') as file_name:
+           output_date = datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
+           file_name.write(f'{output_date}\n')
+        "
 
     - name: Commit changes
       env:
